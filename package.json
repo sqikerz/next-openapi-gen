@@ -18,7 +18,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/tazo90/next-openapi-gen.git"
+		"url": "git@github.com:sqikerz/next-openapi-gen.git"
 	},
 	"keywords": [
 		"nextjs",
