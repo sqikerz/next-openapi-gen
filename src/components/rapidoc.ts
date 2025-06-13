@@ -1,7 +1,7 @@
-export const rapidocDeps = ["rapidoc"];
+export const rapidocDeps = ['rapidoc'];
 
 export function RapidocUI(outputFile: string) {
-  return `
+	return `
 "use client";
 
 import "rapidoc";

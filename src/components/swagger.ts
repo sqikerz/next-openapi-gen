@@ -1,11 +1,11 @@
 export const swaggerDeps = [
-  "swagger-ui",
-  "swagger-ui-react",
-  "--legacy-peer-deps", // @temp: swagger-ui-react does not support React 19 now.
+	'swagger-ui',
+	'swagger-ui-react',
+	'--legacy-peer-deps', // @temp: swagger-ui-react does not support React 19 now.
 ];
 
 export function SwaggerUI(outputFile: string) {
-  return `
+	return `
 import "swagger-ui-react/swagger-ui.css";
 
 import dynamic from "next/dynamic";

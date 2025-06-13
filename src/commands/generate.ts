@@ -1,29 +1,29 @@
-import fs from "fs";
-import fse from "fs-extra";
-import path from "path";
-import ora from "ora";
+import fs from 'fs';
+import fse from 'fs-extra';
+import path from 'path';
+import ora from 'ora';
 
-import { OpenApiGenerator } from "../lib/openapi-generator.js";
+import { OpenApiGenerator } from '../lib/openapi-generator.js';
 
 export async function generate() {
-  const spinner = ora("Generating OpenAPI specification...\n").start();
+	const spinner = ora('Generating OpenAPI specification...\n').start();
 
-  const generator = new OpenApiGenerator();
-  const config = generator.getConfig();
+	const generator = new OpenApiGenerator();
+	const config = generator.getConfig();
 
-  // Create api dir if not exists
-  const apiDir = path.resolve(config.apiDir);
-  await fse.ensureDir(apiDir);
+	// Create api dir if not exists
+	const apiDir = path.resolve(config.apiDir);
+	await fse.ensureDir(apiDir);
 
-  // Create public dir if not exists
-  const outputDir = path.resolve("./public");
-  await fse.ensureDir(outputDir);
+	// Create public dir if not exists
+	const outputDir = path.resolve('./public');
+	await fse.ensureDir(outputDir);
 
-  const apiDocs = generator.generate();
+	const apiDocs = generator.generate();
 
-  // Write api docs
-  const outputFile = path.join(outputDir, config.outputFile);
-  fs.writeFileSync(outputFile, JSON.stringify(apiDocs, null, 2));
+	// Write api docs
+	const outputFile = path.join(outputDir, config.outputFile);
+	fs.writeFileSync(outputFile, JSON.stringify(apiDocs, null, 2));
 
-  spinner.succeed(`OpenAPI specification generated at ${outputFile}`);
+	spinner.succeed(`OpenAPI specification generated at ${outputFile}`);
 }

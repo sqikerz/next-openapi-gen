@@ -1,7 +1,7 @@
-export const stoplightDeps = ["@stoplight/elements"];
+export const stoplightDeps = ['@stoplight/elements'];
 
 export function StoplightUI(outputFile: string) {
-  return `
+	return `
 "use client";
 
 import { API } from "@stoplight/elements";

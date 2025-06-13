@@ -1,7 +1,7 @@
-export const redocDeps = ["redoc"];
+export const redocDeps = ['redoc'];
 
 export function RedocUI(outputFile: string) {
-  return `
+	return `
 "use client";
 
 import { RedocStandalone } from "redoc";

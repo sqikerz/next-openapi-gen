@@ -1,7 +1,7 @@
-export const scalarDeps = ["@scalar/api-reference-react", "ajv"];
+export const scalarDeps = ['@scalar/api-reference-react', 'ajv'];
 
 export function ScalarUI(outputFile: string) {
-  return `
+	return `
 "use client";
 
 import { ApiReferenceReact } from "@scalar/api-reference-react";
